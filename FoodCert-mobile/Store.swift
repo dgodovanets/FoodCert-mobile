@@ -8,15 +8,25 @@
 import SwiftUI
 
 protocol LanguagePack {
-    var login: String { get }
+    var loginButton: String { get }
+    var emailPlaceholder: String { get }
+    var passwordPlaceholder: String { get }
+    var loginErrorMessage: String { get }
 }
 
 struct LanguagePackEN : LanguagePack {
-    var login = "Sign in"
+    var loginButton: String = "SIGN IN"
+    var emailPlaceholder: String = "Email"
+    var passwordPlaceholder: String = "Password"
+    var loginErrorMessage: String = "Incorrect credentials. Please, try again."
 }
 
 struct LanguagePackUK : LanguagePack {
-    var login = "Увійти"
+    var loginButton: String = "УВІЙТИ"
+    var emailPlaceholder: String = "Пошта"
+    var passwordPlaceholder: String = "Пароль"
+    var loginErrorMessage: String = "Неправильні дані. Будь ласка, спробуйте ще раз."
+
 }
 
 
@@ -24,6 +34,9 @@ struct LanguagePackUK : LanguagePack {
 class Store: ObservableObject  {
     @Published var token: String?
     @Published var langActive = "EN"
+    @Published var user: Any = "";
+    @Published var data: Any = "";
+    var baseURL = "http://localhost:3333";
     
     var langPack: LanguagePack {
         get {

@@ -1,0 +1,6 @@
+module Pods_FoodCert_mobile {
+  umbrella header "Pods-FoodCert-mobile-umbrella.h"
+
+  export *
+  module * { export * }
+}
