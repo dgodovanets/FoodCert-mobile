@@ -11,6 +11,9 @@
 		9237EF942573806900235F56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9237EF932573806900235F56 /* ContentView.swift */; };
 		9237EF962573806900235F56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9237EF952573806900235F56 /* Assets.xcassets */; };
 		9237EF992573806900235F56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9237EF982573806900235F56 /* Preview Assets.xcassets */; };
+		9237EFA2257386CC00235F56 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9237EFA1257386CC00235F56 /* CircleImage.swift */; };
+		9237EFA52573892C00235F56 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9237EFA42573892C00235F56 /* MapView.swift */; };
+		92E6E3C625780D7100F286A4 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E6E3C525780D7100F286A4 /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		9237EF952573806900235F56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9237EF982573806900235F56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9237EF9A2573806900235F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9237EFA1257386CC00235F56 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		9237EFA42573892C00235F56 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		92E6E3C525780D7100F286A4 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +61,11 @@
 				9237EF912573806900235F56 /* FoodCert_mobileApp.swift */,
 				9237EF932573806900235F56 /* ContentView.swift */,
 				9237EF952573806900235F56 /* Assets.xcassets */,
+				9237EFA1257386CC00235F56 /* CircleImage.swift */,
+				9237EFA42573892C00235F56 /* MapView.swift */,
 				9237EF9A2573806900235F56 /* Info.plist */,
 				9237EF972573806900235F56 /* Preview Content */,
+				92E6E3C525780D7100F286A4 /* Store.swift */,
 			);
 			path = "FoodCert-mobile";
 			sourceTree = "<group>";
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E6E3C625780D7100F286A4 /* Store.swift in Sources */,
 				9237EF942573806900235F56 /* ContentView.swift in Sources */,
+				9237EFA52573892C00235F56 /* MapView.swift in Sources */,
 				9237EF922573806900235F56 /* FoodCert_mobileApp.swift in Sources */,
+				9237EFA2257386CC00235F56 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
