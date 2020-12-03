@@ -11,7 +11,7 @@ import SwiftUI
 struct FoodCert_mobileApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SignIn().environmentObject(Store())
         }
     }
 }

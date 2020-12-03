@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+enum Language {
+    case EN, UK
+}
+
 protocol LanguagePack {
     var loginButton: String { get }
     var emailPlaceholder: String { get }
@@ -32,18 +36,43 @@ struct LanguagePackUK : LanguagePack {
 
 
 class Store: ObservableObject  {
-    @Published var token: String?
-    @Published var langActive = "EN"
-    @Published var user: Any = "";
-    @Published var data: Any = "";
-    @Published var baseURL = "http://localhost:3333";
+    @Published var token: String = ""
+    @Published var langActive = Language.EN
+    @Published var user: Any = ""
+    @Published var baseURL = "http://localhost:3333"
+    @Published var tranportations: Array<Transportation> = []
     
     var langPack: LanguagePack {
         get {
-            if (langActive == "EN") {
+            if (langActive == Language.EN) {
                 return LanguagePackEN()
             }
             return LanguagePackUK()
         }
+    }
+    
+    func getTempString(temp: Float64) -> String {
+        if (self.langActive == .UK) {
+            return (NSString(format: "%.0f", temp) as String) + "°C";
+        }
+        let ftemp = temp * 9/5 + 32
+        return (NSString(format: "%.0f", ftemp) as String) + "°F";
+    }
+    
+    func getFormattedDate(rawDate: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+
+        let date = dateFormatter.date(from: rawDate)
+        let locale: String
+        if (self.langActive == .EN) {
+            locale = "en_US"
+        } else {
+            locale = "uk_UA"
+        }
+        
+        dateFormatter.locale = Locale(identifier: locale)
+        dateFormatter.setLocalizedDateFormatFromTemplate("MMMdyyyyhhmm")
+        return dateFormatter.string(from: date!)
     }
 }
