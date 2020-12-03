@@ -58,7 +58,7 @@ struct TopBar: View {
                     Button(action: {
                         store.token = "";
                     }, label: {
-                        Text("LOG OUT")
+                        Text(store.langPack.logoutButton)
                             .foregroundColor(.black)
                             .padding()
                             .background(Color(.systemGray5))

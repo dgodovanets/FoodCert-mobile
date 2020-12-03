@@ -17,19 +17,27 @@ struct TransportationRow: View {
         HStack {
             VStack {
                 HStack {
-                    Text("Date: " + store.getFormattedDate(rawDate: transportation.transportationStartTime!))
+                    Text(store.langPack.datePre + store.getFormattedDate(rawDate: transportation.transportationStartTime!))
                     Spacer()
                 }
                 HStack {
-                    Text("Min temp: " + store.getTempString(temp: transportation.minimalAllowedTemperature!))
+                    Text(store.langPack.minTempPre + store.getTempString(temp: transportation.minimalAllowedTemperature!))
                     Spacer()
                 }
                 HStack {
-                    Text("Max temp: " + store.getTempString(temp: transportation.maximalAllowedTemperature!))
+                    Text(store.langPack.maxTempPre + store.getTempString(temp: transportation.maximalAllowedTemperature!))
                     Spacer()
                 }
                 HStack {
-                    Text("Score: " + (NSString(format: "%.0f", transportation.score!) as String))
+                    Text(store.langPack.scorePre + (NSString(format: "%.0f", transportation.score!) as String))
+                    Spacer()
+                }
+                HStack {
+                    if transportation.score! > 0 {
+                        Text(store.langPack.certificateProvided)
+                    } else {
+                        Text(store.langPack.noCertificate)
+                    }
                     Spacer()
                 }
             }.padding()

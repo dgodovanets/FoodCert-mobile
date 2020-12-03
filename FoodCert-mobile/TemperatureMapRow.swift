@@ -15,7 +15,7 @@ struct TemperatureMapRow: View {
         HStack {
             VStack {
                 HStack {
-                    Text("When measured: " + store.getDetailedFormattedDate(rawDate: temperatureMap.creationTimestamp!))
+                    Text(store.langPack.whenMeasuredPre + store.getDetailedFormattedDate(rawDate: temperatureMap.creationTimestamp!))
                     Spacer()
                 }
             }.padding()

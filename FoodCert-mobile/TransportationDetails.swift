@@ -13,15 +13,17 @@ struct TransportationDetails: View {
 
     var body: some View {
         VStack {
-            TransportationRow(transportation: transportation).environmentObject(store)
-                .padding(.bottom, -10)
+            HStack {
+                TransportationRow(transportation: transportation).environmentObject(store)
+                    .padding(.bottom, -10)
+            }
             NavigationView {
                 List(transportation.temperatureMaps!, id: \._id) { temperatureMap in
-                    //NavigationLink(
-                    //    destination: TransportationDetails(transportation: transportation)) {
+                    NavigationLink(
+                        destination: TemperaturePointDetails(temperatureMap: temperatureMap)) {
                         TemperatureMapRow(temperatureMap: temperatureMap).environmentObject(store)
-                    //}
-                }.navigationBarTitle(Text("Temperature profiles"))
+                    }
+                }.navigationBarTitle(Text(store.langPack.temperatureProfiles))
             }
         }
     }

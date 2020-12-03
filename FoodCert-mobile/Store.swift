@@ -16,24 +16,60 @@ protocol LanguagePack {
     var emailPlaceholder: String { get }
     var passwordPlaceholder: String { get }
     var loginErrorMessage: String { get }
+    var generateButton: String { get }
+    var myTransportationsTitle: String { get }
+    var logoutButton: String { get }
+    var temperatureProfiles: String { get }
+    var temperaturePoints: String { get }
+    var temperaturePre: String { get }
+    var datePre: String { get }
+    var minTempPre: String { get }
+    var maxTempPre: String { get }
+    var scorePre: String { get }
+    var certificateProvided: String { get }
+    var noCertificate: String { get }
+    var whenMeasuredPre: String { get }
 }
 
-struct LanguagePackEN : LanguagePack {
+struct LanguagePackEN: LanguagePack {
     var loginButton: String = "SIGN IN"
     var emailPlaceholder: String = "Email"
     var passwordPlaceholder: String = "Password"
     var loginErrorMessage: String = "Incorrect credentials. Please, try again."
+    var generateButton: String = "GENERATE"
+    var myTransportationsTitle: String = "My transportations"
+    var logoutButton: String = "LOG OUT"
+    var temperatureProfiles: String = "Temperature profiles"
+    var temperaturePoints: String = "Temperature points"
+    var temperaturePre: String = "Temp: "
+    var datePre: String = "Date: "
+    var minTempPre: String = "Min temp: "
+    var maxTempPre: String = "Max temp: "
+    var scorePre: String = "Score: "
+    var certificateProvided: String = "Certificate provided"
+    var noCertificate: String = "No certificate"
+    var whenMeasuredPre: String = "When measured: "
 }
 
-struct LanguagePackUK : LanguagePack {
+struct LanguagePackUK: LanguagePack {
     var loginButton: String = "УВІЙТИ"
     var emailPlaceholder: String = "Пошта"
     var passwordPlaceholder: String = "Пароль"
     var loginErrorMessage: String = "Неправильні дані. Будь ласка, спробуйте ще раз."
-
+    var generateButton: String = "ЗГЕНЕРУВАТИ"
+    var myTransportationsTitle: String = "Мої перевезення"
+    var logoutButton: String = "ВИЙТИ"
+    var temperatureProfiles: String = "Температурні профілі"
+    var temperaturePoints: String = "Точки температур"
+    var temperaturePre: String = "Температура: "
+    var datePre: String = "Дата: "
+    var minTempPre: String = "Мінімальна температура: "
+    var maxTempPre: String = "Максимальна температура: "
+    var scorePre: String = "Кількість балів: "
+    var certificateProvided: String = "Надано сертифікат"
+    var noCertificate: String = "Сертифікат відсутній"
+    var whenMeasuredPre: String = "Коли виміряно: "
 }
-
-
 
 class Store: ObservableObject  {
     @Published var token: String = ""
