@@ -12,10 +12,18 @@ struct TransportationRow: View {
 
     var transportation: Transportation
     @State private var text: String = ""
+    var enableTapToViewCertificate = false;
     
     var body: some View {
         HStack {
             VStack {
+                if enableTapToViewCertificate {
+                    HStack {
+                        Text(store.langPack.tapToViewCertificate)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        Spacer()
+                    }
+                }
                 HStack {
                     Text(store.langPack.datePre + store.getFormattedDate(rawDate: transportation.transportationStartTime!))
                     Spacer()

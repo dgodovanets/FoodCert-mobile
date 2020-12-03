@@ -14,8 +14,21 @@ struct TransportationDetails: View {
     var body: some View {
         VStack {
             HStack {
-                TransportationRow(transportation: transportation).environmentObject(store)
-                    .padding(.bottom, -10)
+                if transportation.score! > 0 {
+                    NavigationLink(
+                        destination: Certificate(certificateURL: store.baseURL + "/certificate/" + transportation._id! + "?authToken=" + store.token)) {
+                        VStack {
+                            TransportationRow(transportation: transportation, enableTapToViewCertificate: true).environmentObject(store)
+                        }
+                        .padding(.bottom, -10)
+                        .foregroundColor(.black)
+                    }
+                } else {
+                    TransportationRow(transportation: transportation).environmentObject(store)
+                        .padding(.bottom, -10)
+                        .foregroundColor(.black)
+                }
+                
             }
             NavigationView {
                 List(transportation.temperatureMaps!, id: \._id) { temperatureMap in

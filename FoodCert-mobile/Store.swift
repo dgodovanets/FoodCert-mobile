@@ -29,6 +29,7 @@ protocol LanguagePack {
     var certificateProvided: String { get }
     var noCertificate: String { get }
     var whenMeasuredPre: String { get }
+    var tapToViewCertificate: String { get }
 }
 
 struct LanguagePackEN: LanguagePack {
@@ -49,6 +50,7 @@ struct LanguagePackEN: LanguagePack {
     var certificateProvided: String = "Certificate provided"
     var noCertificate: String = "No certificate"
     var whenMeasuredPre: String = "When measured: "
+    var tapToViewCertificate: String = "Tap to view the certificate"
 }
 
 struct LanguagePackUK: LanguagePack {
@@ -69,6 +71,7 @@ struct LanguagePackUK: LanguagePack {
     var certificateProvided: String = "Надано сертифікат"
     var noCertificate: String = "Сертифікат відсутній"
     var whenMeasuredPre: String = "Коли виміряно: "
+    var tapToViewCertificate: String = "Натисніть щоб переглянути сертифікат"
 }
 
 class Store: ObservableObject  {

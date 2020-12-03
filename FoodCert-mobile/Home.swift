@@ -47,7 +47,6 @@ struct Home: View {
     @State var text: String = "";
     
     private func fetch() {
-        store.langActive = .UK
         store.token = "10e987d8-fb8c-4f4a-8319-39fa00b69584"
         let url = URL(string: store.baseURL + "/getMyTransportations?authToken=" + store.token)!
         var request = URLRequest(url: url)
