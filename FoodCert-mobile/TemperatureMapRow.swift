@@ -9,14 +9,23 @@ import SwiftUI
 
 struct TemperatureMapRow: View {
     @EnvironmentObject var store: Store;
-
+    var temperatureMap: TemperatureMap
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            VStack {
+                HStack {
+                    Text("When measured: " + store.getDetailedFormattedDate(rawDate: temperatureMap.creationTimestamp!))
+                    Spacer()
+                }
+            }.padding()
+            Spacer()
+        }
     }
 }
 
 struct TemperatureMapRow_Previews: PreviewProvider {
     static var previews: some View {
-        TemperatureMapRow().environmentObject(Store())
+        TemperatureMapRow(temperatureMap: TemperatureMap(_id: "1212312", isValid: nil, points: nil, creationTimestamp: "2020-12-03T10:38:01.896Z")).environmentObject(Store())
     }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TemperatureMapPoint: Codable {
+    let _id: String?
     let x: Float64?
     let y: Float64?
     let z: Float64?
@@ -15,6 +16,7 @@ struct TemperatureMapPoint: Codable {
 }
 
 struct TemperatureMap: Codable {
+    let _id: String?
     let isValid: Bool?
     let points: Array<TemperatureMapPoint>?
     let creationTimestamp: String?

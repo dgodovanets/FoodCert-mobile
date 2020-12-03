@@ -75,4 +75,21 @@ class Store: ObservableObject  {
         dateFormatter.setLocalizedDateFormatFromTemplate("MMMdyyyyhhmm")
         return dateFormatter.string(from: date!)
     }
+    
+    func getDetailedFormattedDate(rawDate: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+
+        let date = dateFormatter.date(from: rawDate)
+        let locale: String
+        if (self.langActive == .EN) {
+            locale = "en_US"
+        } else {
+            locale = "uk_UA"
+        }
+        
+        dateFormatter.locale = Locale(identifier: locale)
+        dateFormatter.setLocalizedDateFormatFromTemplate("hhmmss")
+        return dateFormatter.string(from: date!)
+    }
 }
