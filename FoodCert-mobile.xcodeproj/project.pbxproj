@@ -14,6 +14,8 @@
 		9202C51D25791268003DDEFD /* TemperatureMapRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9202C51C25791268003DDEFD /* TemperatureMapRow.swift */; };
 		9202C52025791CAB003DDEFD /* TemperaturePointDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9202C51F25791CAB003DDEFD /* TemperaturePointDetails.swift */; };
 		9202C52325791DF2003DDEFD /* TemperatureMapPointRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9202C52225791DF2003DDEFD /* TemperatureMapPointRow.swift */; };
+		921A9E4C25794522003EDA65 /* PDFKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921A9E4B25794522003EDA65 /* PDFKitView.swift */; };
+		921A9E4F25794831003EDA65 /* Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921A9E4E25794831003EDA65 /* Certificate.swift */; };
 		9237EF922573806900235F56 /* FoodCert_mobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9237EF912573806900235F56 /* FoodCert_mobileApp.swift */; };
 		9237EF962573806900235F56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9237EF952573806900235F56 /* Assets.xcassets */; };
 		9237EF992573806900235F56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9237EF982573806900235F56 /* Preview Assets.xcassets */; };
@@ -29,6 +31,8 @@
 		9202C51C25791268003DDEFD /* TemperatureMapRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureMapRow.swift; sourceTree = "<group>"; };
 		9202C51F25791CAB003DDEFD /* TemperaturePointDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperaturePointDetails.swift; sourceTree = "<group>"; };
 		9202C52225791DF2003DDEFD /* TemperatureMapPointRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureMapPointRow.swift; sourceTree = "<group>"; };
+		921A9E4B25794522003EDA65 /* PDFKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFKitView.swift; sourceTree = "<group>"; };
+		921A9E4E25794831003EDA65 /* Certificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Certificate.swift; sourceTree = "<group>"; };
 		9237EF8E2573806900235F56 /* FoodCert-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodCert-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9237EF912573806900235F56 /* FoodCert_mobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCert_mobileApp.swift; sourceTree = "<group>"; };
 		9237EF952573806900235F56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				9202C52225791DF2003DDEFD /* TemperatureMapPointRow.swift */,
 				9202C5162578F6FC003DDEFD /* TransportationRow.swift */,
 				9202C51C25791268003DDEFD /* TemperatureMapRow.swift */,
+				921A9E4B25794522003EDA65 /* PDFKitView.swift */,
+				921A9E4E25794831003EDA65 /* Certificate.swift */,
 				9202C5122578D5E6003DDEFD /* TopBar.swift */,
 				9237EF9A2573806900235F56 /* Info.plist */,
 				9237EF972573806900235F56 /* Preview Content */,
@@ -164,6 +170,8 @@
 			files = (
 				92E6E3C625780D7100F286A4 /* Store.swift in Sources */,
 				9202C5132578D5E6003DDEFD /* TopBar.swift in Sources */,
+				921A9E4C25794522003EDA65 /* PDFKitView.swift in Sources */,
+				921A9E4F25794831003EDA65 /* Certificate.swift in Sources */,
 				92E6E3C92578133700F286A4 /* SignIn.swift in Sources */,
 				9202C50D2578D01D003DDEFD /* Home.swift in Sources */,
 				9202C5172578F6FC003DDEFD /* TransportationRow.swift in Sources */,
