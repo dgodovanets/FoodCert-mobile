@@ -36,7 +36,7 @@ class Store: ObservableObject  {
     @Published var langActive = "EN"
     @Published var user: Any = "";
     @Published var data: Any = "";
-    var baseURL = "http://localhost:3333";
+    @Published var baseURL = "http://localhost:3333";
     
     var langPack: LanguagePack {
         get {
